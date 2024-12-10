@@ -10,12 +10,13 @@
 
         <!-- CLASE DATE -->
 
-    <h1>Clase Date</h1>
+    <h1>Clases Date, Math</h1>
 
-    <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
+        <h3>Clase Date</h3>
+    <!-- Tabla css-grid. tipos 2 columnas usar la clase combinada class= "tabla-grid col-02" tipos 3 col-03-->
     <div class="tabla-grid">
-      <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">Instanciar la fecha y la hora actual</div>
+      <!-- encabezado-ejem tipos -->
+      <div class="encabezado-ejem tipos">Instanciar la fecha y la hora actual</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
@@ -29,8 +30,8 @@
 
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Instanciar fecha específica</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Instanciar fecha específica</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -44,8 +45,8 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">A partir de Componentes de Fecha</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">A partir de Componentes de Fecha</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -60,23 +61,26 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">A partir de un timestamp</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">A partir de un timestamp</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>
-            let fromTimestamp = new Date(1672444800000); // Milisegundos desde 01/01/1970
-            console.log(fromTimestamp); // Tue Dec 31 2023 00:00:00 GMT+0000 (UTC)                    
+            let fromTimestamp = new Date(1672444800000); 
+            // Milisegundos desde 01/01/1970
+
+            console.log(fromTimestamp); 
+            // Tue Dec 31 2023 00:00:00 GMT+0000 (UTC)                    
                 </code>
             </pre>
         </div>
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Instanciar fecha específica</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Instanciar fecha específica</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -89,11 +93,11 @@
         </div>
     </div>
 
-    <h2>Métodos</h2>
+    <h3>Métodos</h3>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Obtener Componentes de Fecha</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Obtener Componentes de Fecha</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -102,9 +106,9 @@
         let date = new Date();
 
     console.log(date.getFullYear()); // Año actual, ej. 2024
-    console.log(date.getMonth());    // Mes (0-11), ej. 11 para diciembre
+    console.log(date.getMonth());    // Mes (0-11), ej. 11 tipos diciembre
     console.log(date.getDate());     // Día del mes (1-31)
-    console.log(date.getDay());      // Día de la semana (0-6), ej. 0 para domingo
+    console.log(date.getDay());      // Día de la semana (0-6), ej. 0 tipos domingo
     
                 </code>
             </pre>
@@ -112,8 +116,8 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Obtener Componentes de Hora</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Obtener Componentes de Hora</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -130,8 +134,8 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Modificar Componentes de Fecha</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Modificar Componentes de Fecha</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -147,8 +151,8 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Comparar Fechas</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Comparar Fechas</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -157,34 +161,38 @@
     let date1 = new Date('2024-12-25');
     let date2 = new Date('2024-01-01');
                     
-    console.log(date1 > date2); // true (25 de diciembre es después del 1 de enero)
-    console.log(date1 - date2); // Diferencia en milisegundos                                    
+    console.log(date1 > date2); 
+    // true (25 de diciembre es después del 1 de enero)
+
+    console.log(date1 - date2); 
+    // Diferencia en milisegundos                                    
                 </code>
             </pre>
         </div>
     </div>
 
-    <h2>Atributos</h2>
+    <h3>Atributos</h3>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Obtener el timestamp Actual</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Obtener el timestamp Actual</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>                  
     let timestamp = Date.now();
-    console.log(timestamp); // Milisegundos desde 1970, ej. 1702438452093                                 
-                </code>
-            </pre>
+    console.log(timestamp); 
+    // Milisegundos desde 1970, ej. 1702438452093
+</code>
+</pre>
         </div>
     </div>
 
-    <h2>Ejemplos con Fechas</h2>
+    <h3>Ejemplos con Fechas</h3>
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Ejemplos</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Ejemplos</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -197,29 +205,30 @@
     now.setFullYear(2025);
     now.setMonth(0); // Enero
     now.setDate(15);
-    console.log("Fecha modificada:", now.toDateString()); // Muestra fecha modificada
+    console.log("Fecha modificada:", now.toDateString());
+    // Muestra fecha modificada
                    
-    // Comparar fechas
+    // Compara fechas
     let anotherDate = new Date('2025-01-15');
-    console.log("¿Son iguales?", now.getTime() === anotherDate.getTime()); // true
+    console.log("¿Son iguales?", now.getTime() === anotherDate.getTime());
+    // true
                   
     // Calcular días entre dos fechas
     let startDate = new Date('2024-12-01');
     let endDate = new Date('2024-12-25');
     let daysDifference = (endDate - startDate) / (1000 * 60 * 60 * 24);
-    console.log(`Diferencia en días: ${daysDifference}`); // 24 días
-                                                                
+    console.log(`Diferencia en días: ${daysDifference}`); // 24 días                                                 
                 </code>
             </pre>
         </div>
     </div>
 
                  <!-- CLASE MATH -->
-    <h1>Clase Math</h1>
+    <h2>Clase Math</h3>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Inastanciación</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Inastanciación</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -230,17 +239,16 @@
                     
         // Uso correcto:
         let piValue = Math.PI; 
-        console.log(piValue); // 3.141592653589793
-                                              
+        console.log(piValue); // 3.141592653589793                          
                 </code>
             </pre>
         </div>
     </div>
 
-    <h2>Métodos Principales</h2>
+    <h3>Métodos Principales</h3>
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Redondeo de Números</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Redondeo de Números</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -255,8 +263,8 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Potencias y Raíces</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Potencias y Raíces</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -271,8 +279,8 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Generación de Números Aleatorios</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Generación de Números Aleatorios</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -290,8 +298,8 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Valores Absolutos Mínimos y Máximos</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Valores Absolutos Mínimos y Máximos</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -306,8 +314,8 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Trigonometría</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Trigonometría</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -324,11 +332,11 @@
 
                      <!-- ARRAY -->
 
-    <h1>Array</h1>
+    <h2>Array</h2>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Instanciación</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Instanciación</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -342,14 +350,16 @@
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Constructor Array</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Constructor Array</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>                  
-let arr2 = new Array(5); // Crea un array con 5 espacios vacíos
+let arr2 = new Array(5); 
+// Crea un array con 5 espacios vacíos
+
 console.log(arr2); // [ <5 empty items> ]
                 
 let arr3 = new Array(1, 2, 3); // Crea un array con valores iniciales
@@ -360,18 +370,22 @@ console.log(arr3); // [1, 2, 3]
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Convertir Estructuras en Arrays</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Convertir Estructuras en Arrays</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>                  
 let str = "Hola";
-let arrFromStr = Array.from(str); // Convierte una cadena en un array de caracteres
+let arrFromStr = Array.from(str);
+// Convierte una cadena en un array de caracteres
+
 console.log(arrFromStr); // ['H', 'o', 'l', 'a']
                     
-let arrFromSet = Array.from(new Set([1, 2, 2, 3])); // Convierte un Set en un array
+let arrFromSet = Array.from(new Set([1, 2, 2, 3]));
+// Convierte un Set en un array
+
 console.log(arrFromSet); // [1, 2, 3]                 
                 </code>
             </pre>
@@ -379,11 +393,11 @@ console.log(arrFromSet); // [1, 2, 3]
     </div>
 
                    <!-- CLASE STRING -->
-    <h1>String</h1>
+    <h2>String</h2>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Instanciación</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Instanciación</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -391,14 +405,14 @@ console.log(arrFromSet); // [1, 2, 3]
                 <code>                  
             let str1 = "Hola, mundo!";
             console.log(str1); // Hola, mundo!     
-                </code>
+ </code>
             </pre>
         </div>
     </div>
 
     <div class="tabla-grid">
-        <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">Constructor String</div>
+        <!-- encabezado-ejem tipos -->
+        <div class="encabezado-ejem tipos">Constructor String</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
