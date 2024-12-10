@@ -1,0 +1,189 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap");
+
+html {
+  font-family: "Quicksand";
+}
+
+h1 {
+  text-align: center;
+  font-family: "Philosopher";
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #b6c9de;
+}
+
+h2,
+h3 {
+  text-align: center;
+  font-family: Bitter;
+  font-size: 2rem;
+}
+
+/* Estilo Código */
+
+pre.prettyprint {
+  font-size: 1rem;
+  max-width: 50rem;
+  overflow: scroll;
+}
+
+/* Tablas CSS-Grid */
+.tabla-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  min-width: 50rem;
+  width: 50rem;
+  margin: 2rem auto;
+}
+
+.col-02 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+  gap: 1px;
+}
+
+.col-03 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 columnas de igual tamaño */
+  gap: 1px;
+}
+
+.col-04 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 2 columnas de igual tamaño */
+  gap: 1px;
+}
+
+.celda {
+  background-color: white;
+  padding: 8px;
+  border: 1px solid black;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.encabezado {
+  background-color: #f4f4f4;
+  padding: 8px;
+  border: 1px solid black;
+  text-align: left;
+  font-weight: bold;
+}
+
+.celda-ejem {
+  background-color: white;
+  padding: 8px;
+  border: 1px solid black;
+  text-align: left;
+  margin-bottom: 1rem;
+  border-radius: 3rem;
+  background-color: #333;
+}
+
+.encabezado-ejem {
+  border: 1px solid black;
+  text-align: left;
+  font-family: Bitter;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  border: none;
+  margin: -1.5rem auto;
+  padding: 0.9rem 2rem 1.6rem;
+}
+
+.celda-ejem p {
+  width: 80%;
+  margin: -1rem auto 1rem;
+  background-color: #fffccc;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.btn-ejem {
+  margin: 0 0 3rem 0;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  color: black;
+
+}
+/* ----------------------------------- */
+
+/* esto es para pagina met-predef */
+.container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ----------------------------------- */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+iframe{
+  width: 100%;
+  height: 100vh;
+}
+
+.links {
+  font-family: Bitter;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.links:hover {
+  opacity: 80%;
+  box-shadow: 0 5px grey;
+  transform: scale(1.05);
+}
+
+.var {
+  background-color: #cfaacd;
+}
+
+.tipos {
+  background-color: #b5d26f;
+}
+
+.met {
+  background-color: #b8b9b8;
+}
+
+.funciones {
+  background-color: #fdbb9f;
+}
+
+.para {
+  background-color: #b6c9de;
+}
+
+footer {
+  text-align: center;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+footer a {
+  display: inline-block;
+}
+
