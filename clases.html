@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h2>Clase Date</h2>
+
+        <!-- CLASE DATE -->
+
+    <h1>Clase Date</h1>
 
     <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
     <div class="tabla-grid">
@@ -22,22 +25,390 @@
             console.log(now); // Muestra la fecha y hora actuales
         </code>
       </pre>
-      </div>
+    </div>
 
-      <div class="tabla-grid">
-      <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">Instanciar fecha específica</div>
 
-      <!-- Fila 1 -->
-      <div class="celda-ejem">
-        <pre class="prettyprint">
-        <code>
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Instanciar fecha específica</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>
             let christmas = new Date('2024-12-25T00:00:00');
             console.log(christmas); // Wed Dec 25 2024 00:00:00 GMT+0000 (UTC)
+                </code>
+            </pre>
+        </div>
+    </div>
 
-        </code>
-      </pre>
-      </div>
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">A partir de Componentes de Fecha</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>
+            let customDate = new Date(2024, 11, 25, 10, 30, 15); 
+            console.log(customDate); // Wed Dec 25 2024 10:30:15 GMT+0000 (UTC)
+
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">A partir de un timestamp</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>
+            let fromTimestamp = new Date(1672444800000); // Milisegundos desde 01/01/1970
+            console.log(fromTimestamp); // Tue Dec 31 2023 00:00:00 GMT+0000 (UTC)                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Instanciar fecha específica</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>
+            let christmas = new Date('2024-12-25T00:00:00');
+            console.log(christmas); // Wed Dec 25 2024 00:00:00 GMT+0000 (UTC)
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <h2>Métodos</h2>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Obtener Componentes de Fecha</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>
+        let date = new Date();
+
+    console.log(date.getFullYear()); // Año actual, ej. 2024
+    console.log(date.getMonth());    // Mes (0-11), ej. 11 para diciembre
+    console.log(date.getDate());     // Día del mes (1-31)
+    console.log(date.getDay());      // Día de la semana (0-6), ej. 0 para domingo
+    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Obtener Componentes de Hora</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>
+    console.log(date.getHours());    // Hora (0-23)
+    console.log(date.getMinutes());  // Minutos (0-59)
+    console.log(date.getSeconds());  // Segundos (0-59)
+    console.log(date.getMilliseconds()); // Milisegundos (0-999)                  
+    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Modificar Componentes de Fecha</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+            date.setFullYear(2025);
+            date.setMonth(0);    // Enero
+            date.setDate(15);    // Día 15
+            console.log(date);   // Muestra la nueva fecha ajustada                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Comparar Fechas</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+    let date1 = new Date('2024-12-25');
+    let date2 = new Date('2024-01-01');
+                    
+    console.log(date1 > date2); // true (25 de diciembre es después del 1 de enero)
+    console.log(date1 - date2); // Diferencia en milisegundos                                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <h2>Atributos</h2>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Obtener el timestamp Actual</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+    let timestamp = Date.now();
+    console.log(timestamp); // Milisegundos desde 1970, ej. 1702438452093                                 
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <h2>Ejemplos con Fechas</h2>
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Ejemplos</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+    let now = new Date();
+    console.log("Fecha actual:", now.toString()); // Muestra la fecha actual
+                    
+    // Cambiar fecha
+    now.setFullYear(2025);
+    now.setMonth(0); // Enero
+    now.setDate(15);
+    console.log("Fecha modificada:", now.toDateString()); // Muestra fecha modificada
+                   
+    // Comparar fechas
+    let anotherDate = new Date('2025-01-15');
+    console.log("¿Son iguales?", now.getTime() === anotherDate.getTime()); // true
+                  
+    // Calcular días entre dos fechas
+    let startDate = new Date('2024-12-01');
+    let endDate = new Date('2024-12-25');
+    let daysDifference = (endDate - startDate) / (1000 * 60 * 60 * 24);
+    console.log(`Diferencia en días: ${daysDifference}`); // 24 días
+                                                                
+                </code>
+            </pre>
+        </div>
+    </div>
+
+                 <!-- CLASE MATH -->
+    <h1>Clase Math</h1>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Inastanciación</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+        // No se puede hacer esto:
+        let mathInstance = new Math(); // Error: Math no es un constructor
+                    
+        // Uso correcto:
+        let piValue = Math.PI; 
+        console.log(piValue); // 3.141592653589793
+                                              
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <h2>Métodos Principales</h2>
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Redondeo de Números</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+    console.log(Math.round(4.6));   // 5 (redondeo al entero más cercano)
+    console.log(Math.ceil(4.2));    // 5 (redondeo hacia arriba)
+    console.log(Math.floor(4.8));   // 4 (redondeo hacia abajo)         
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Potencias y Raíces</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+    console.log(Math.pow(2, 3));    // 8 (2 elevado a la 3)
+    console.log(Math.sqrt(16));     // 4 (raíz cuadrada de 16)
+    console.log(Math.cbrt(27));     // 3 (raíz cúbica de 27)               
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Generación de Números Aleatorios</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+     console.log(Math.random()); // Número aleatorio entre 0 y 1
+
+     // Número aleatorio entre 1 y 10
+     let random = Math.floor(Math.random() * 10) + 1;
+     console.log(random); // Ejemplo: 7
+                         
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Valores Absolutos Mínimos y Máximos</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+    console.log(Math.abs(-5));        // 5 (valor absoluto)
+    console.log(Math.max(1, 5, 10));  // 10 (mayor valor)
+    console.log(Math.min(1, 5, 10));  // 1 (menor valor)                      
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Trigonometría</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+     console.log(Math.sin(Math.PI / 2)); // 1 (seno de π/2)
+     console.log(Math.cos(0));          // 1 (coseno de 0)
+    console.log(Math.tan(Math.PI / 4)); // 1 (tangente de π/4)
+                     
+                </code>
+            </pre>
+        </div>
+    </div>
+
+                     <!-- ARRAY -->
+
+    <h1>Array</h1>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Instanciación</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+        let arr1 = [1, 2, 3, 4, 5];
+        console.log(arr1); // [1, 2, 3, 4, 5] 
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Constructor Array</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+let arr2 = new Array(5); // Crea un array con 5 espacios vacíos
+console.log(arr2); // [ <5 empty items> ]
+                
+let arr3 = new Array(1, 2, 3); // Crea un array con valores iniciales
+console.log(arr3); // [1, 2, 3]                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Convertir Estructuras en Arrays</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+let str = "Hola";
+let arrFromStr = Array.from(str); // Convierte una cadena en un array de caracteres
+console.log(arrFromStr); // ['H', 'o', 'l', 'a']
+                    
+let arrFromSet = Array.from(new Set([1, 2, 2, 3])); // Convierte un Set en un array
+console.log(arrFromSet); // [1, 2, 3]                 
+                </code>
+            </pre>
+        </div>
+    </div>
+
+                   <!-- CLASE STRING -->
+    <h1>String</h1>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Instanciación</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+            let str1 = "Hola, mundo!";
+            console.log(str1); // Hola, mundo!     
+                </code>
+            </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">Constructor String</div>
+
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+            <pre class="prettyprint">
+                <code>                  
+             let str2 = new String("Hola, mundo!");
+             console.log(str2); // [String: 'Hola, mundo!']                     
+                </code>
+            </pre>
+        </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"> </script>
