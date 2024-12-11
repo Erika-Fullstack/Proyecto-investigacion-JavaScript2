@@ -34,8 +34,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let persona = { nombre: "Juan", edad: 25 };
-          console.log(Object.values(persona)); // ["Juan", 25]
+          let persona2 = { nombre: "Juan", edad: 25 };
+          console.log(Object.values(persona2)); // ["Juan", 25]
         </code>
         </pre>
       </div>
@@ -49,8 +49,8 @@
         <div class="celda-ejem">
           <pre class="prettyprint">
           <code>
-            let persona = { nombre: "Juan", edad: 25 };
-            console.log(Object.entries(persona)); 
+            let persona3 = { nombre: "Juan", edad: 25 };
+            console.log(Object.entries(persona3)); 
             // [["nombre", "Juan"], ["edad", 25]]
           </code>
           </pre>
@@ -82,7 +82,7 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          const persona = {
+          const persona4 = {
             nombre: "Ana",
             contactos: {
               telefono: "1234567890",
@@ -90,10 +90,10 @@
             }
           };
           
-          Object.freeze(persona);
+          Object.freeze(persona4);
 
-          persona.contactos.email = "ana@newmail.com";
-          console.log(persona.contactos.email);
+          persona4.contactos.email = "ana@newmail.com";
+          console.log(persona4.contactos.email);
         </code>
         </pre>
       </div>
@@ -107,8 +107,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let persona = { nombre: "Juan" }; 
-          console.log(persona.hasOwnProperty("nombre")); // true
+          let persona5 = { nombre: "Juan" }; 
+          console.log(persona5.hasOwnProperty("nombre")); // true
         </code>
         </pre>
       </div>
@@ -122,11 +122,11 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let persona = { 
+          let persona6 = { 
             nombre: "Juan", edad: 25 
           }; 
-          for (let clave in persona) 
-          { console.log(`${clave}: ${persona[clave]}`); } 
+          for (let clave in persona6) 
+          { console.log(`${clave}: ${persona6[clave]}`); } 
           // nombre: Juan // edad: 25
         </code>
         </pre>
@@ -139,5 +139,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"> </script>
 
-<script src="js/dom.js"></script>
+<script src="js/metodosobjetos.js"></script>
 </html>
