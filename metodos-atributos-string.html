@@ -8,35 +8,203 @@
 </head>
 
 <body>
-    <h2>...</h2>
+    <h2>Métodos y Atributos de Strings</h2>
 
     <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
+
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">encabezado-ejem</div>
+      <div class="encabezado-ejem para">.length</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-            let now = new Date();
-            console.log(now); // Muestra la fecha y hora actuales
+          let texto = "Hola Mundo"; 
+          console.log(texto.length); // 10
         </code>
       </pre>
       </div>
+    </div>
 
-      <div class="tabla-grid">
+    <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">encabezado</div>
+      <div class="encabezado-ejem para">.toUpperCase()</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-            let christmas = new Date('2024-12-25T00:00:00');
-            console.log(christmas); // Wed Dec 25 2024 00:00:00 GMT+0000 (UTC)
+          let texto1 = "Hola"; 
+          console.log(texto1.toUpperCase()); // "HOLA" 
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">.toLowerCase()</div>
+    
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+          <pre class="prettyprint">
+          <code>
+            let texto2 = "Hola"; 
+            console.log(texto2.toLowerCase()); // "hola"
+          </code>
+          </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">.trim()</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let texto3 = " Hola "; 
+          console.log(texto3.trim()); // "Hola"
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">.indexOf</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let texto4 = "Hola Mundo"; 
+          console.log(texto4.indexOf("Mundo")); // 5 
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">includes</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          console.log("Hola Mundo".includes("Mundo")); // true
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">startsWith(searchValue, start)</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let cadena = "Hola, mundo";
+          let cadenaDeBusqueda = "mundo";
+          let resultado = cadena.startsWith(cadenaDeBusqueda, 7);
+          console.log(resultado); // Imprime: true
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">startsWith(searchValue, start)</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let cadena2 = "Hola, mundo";
+          let cadenaDeBusqueda2 = "mundo";
+          let resultado2 = cadena2.startsWith(cadenaDeBusqueda2, 7);
+          console.log(resultado2); // Imprime: true
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">.replace(searchValue, newValue)</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let texto5 = "Hola Mundo"; 
+          console.log(texto5.replace("Mundo", "Amigo")); // "Hola Amigo"
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">split(separator)</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let texto6 = "Hola,Mundo"; 
+          console.log(texto6.split(",")); // ["Hola", "Mundo"]
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">.charAt(index)</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let texto7 = "hola"; 
+          console.log(texto7.charAt(1)); // "o"
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">[index]</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let texto8 = "hola"; 
+          console.log(texto8[1]); // "o"
+        </code>
+        </pre>
+      </div>
+    </div>
+
+
+  <footer>
+    <a href="./index.html" class="links funciones">Volver al índice</a>
+  </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"> </script>
 
+<<<<<<< HEAD
 <script src="js/string.js"></script>
+=======
+<script src="js/metodosstring.js"></script>
+>>>>>>> e0908b63a649827ab5db0e9043fde843d62dc439
 </html>

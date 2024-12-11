@@ -8,35 +8,136 @@
 </head>
 
 <body>
-    <h2>...</h2>
+    <h2>Métodos y Atributos de Objetos</h2>
 
     <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">encabezado-ejem</div>
+      <div class="encabezado-ejem para">.keys()</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-            let now = new Date();
-            console.log(now); // Muestra la fecha y hora actuales
+          let persona = { nombre: "Juan", edad: 25 }; 
+          console.log(Object.keys(persona)); // ["nombre", "edad"] 
         </code>
       </pre>
       </div>
+    </div>
 
-      <div class="tabla-grid">
+    <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">encabezado</div>
+      <div class="encabezado-ejem para">.values()</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-            let christmas = new Date('2024-12-25T00:00:00');
-            console.log(christmas); // Wed Dec 25 2024 00:00:00 GMT+0000 (UTC)
+          let persona2 = { nombre: "Juan", edad: 25 };
+          console.log(Object.values(persona2)); // ["Juan", 25]
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+        <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para">.entries()</div>
+  
+        <!-- Fila 1 -->
+        <div class="celda-ejem">
+          <pre class="prettyprint">
+          <code>
+            let persona3 = { nombre: "Juan", edad: 25 };
+            console.log(Object.entries(persona3)); 
+            // [["nombre", "Juan"], ["edad", 25]]
+          </code>
+          </pre>
+        </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">.assign()</div>
+
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let destino = {}; 
+          let origen = { a: 1 }; 
+          Object.assign(destino, origen); 
+          console.log(destino); // { a: 1 }
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">.freeze()</div>
+
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          const persona4 = {
+            nombre: "Ana",
+            contactos: {
+              telefono: "1234567890",
+              email: "ana@example.com"
+            }
+          };
+          
+          Object.freeze(persona4);
+
+          persona4.contactos.email = "ana@newmail.com";
+          console.log(persona4.contactos.email);
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">.hasOwnProperty(key)</div>
+
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let persona5 = { nombre: "Juan" }; 
+          console.log(persona5.hasOwnProperty("nombre")); // true
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">for...in</div>
+
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let persona6 = { 
+            nombre: "Juan", edad: 25 
+          }; 
+          for (let clave in persona6) 
+          { console.log(`${clave}: ${persona6[clave]}`); } 
+          // nombre: Juan // edad: 25
+        </code>
+        </pre>
+      </div>
+    </div>
+
+   <footer>
+    <a href="./index.html" class="links funciones">Volver al índice</a>
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"> </script>
 
-<script src="js/dom.js"></script>
+<script src="js/metodosobjetos.js"></script>
 </html>
