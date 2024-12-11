@@ -35,8 +35,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto = "Hola"; 
-          console.log(texto.toUpperCase()); // "HOLA" 
+          let texto1 = "Hola"; 
+          console.log(texto1.toUpperCase()); // "HOLA" 
         </code>
         </pre>
       </div>
@@ -50,26 +50,11 @@
         <div class="celda-ejem">
           <pre class="prettyprint">
           <code>
-            let texto = "Hola"; 
-            console.log(texto.toLowerCase()); // "hola"
+            let texto2 = "Hola"; 
+            console.log(texto2.toLowerCase()); // "hola"
           </code>
           </pre>
         </div>
-    </div>
-
-    <div class="tabla-grid">
-      <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">.toLowerCase()</div>
-  
-      <!-- Fila 1 -->
-      <div class="celda-ejem">
-        <pre class="prettyprint">
-        <code>
-          let texto = "Hola"; 
-          console.log(texto.toLowerCase()); // "hola"
-        </code>
-        </pre>
-      </div>
     </div>
 
     <div class="tabla-grid">
@@ -80,8 +65,23 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto = " Hola "; 
-          console.log(texto.trim()); // "Hola"
+          let texto3 = " Hola "; 
+          console.log(texto3.trim()); // "Hola"
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">.indexOf</div>
+  
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let texto4 = "Hola Mundo"; 
+          console.log(texto4.indexOf("Mundo")); // 5 
         </code>
         </pre>
       </div>
@@ -126,10 +126,10 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let cadena = "Hola, mundo";
-          let cadenaDeBusqueda = "mundo";
-          let resultado = cadena.startsWith(cadenaDeBusqueda, 7);
-          console.log(resultado); // Imprime: true
+          let cadena2 = "Hola, mundo";
+          let cadenaDeBusqueda2 = "mundo";
+          let resultado2 = cadena2.startsWith(cadenaDeBusqueda2, 7);
+          console.log(resultado2); // Imprime: true
         </code>
         </pre>
       </div>
@@ -143,8 +143,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto = "Hola Mundo"; 
-          console.log(texto.replace("Mundo", "Amigo")); // "Hola Amigo"
+          let texto5 = "Hola Mundo"; 
+          console.log(texto5.replace("Mundo", "Amigo")); // "Hola Amigo"
         </code>
         </pre>
       </div>
@@ -158,8 +158,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto = "Hola,Mundo"; 
-          console.log(texto.split(",")); // ["Hola", "Mundo"]
+          let texto6 = "Hola,Mundo"; 
+          console.log(texto6.split(",")); // ["Hola", "Mundo"]
         </code>
         </pre>
       </div>
@@ -173,8 +173,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto = "hola"; 
-          console.log(texto.charAt(1)); // "o"
+          let texto7 = "hola"; 
+          console.log(texto7.charAt(1)); // "o"
         </code>
         </pre>
       </div>
@@ -188,8 +188,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto = "hola"; 
-          console.log(texto[1]); // "o"
+          let texto8 = "hola"; 
+          console.log(texto8[1]); // "o"
         </code>
         </pre>
       </div>
@@ -202,5 +202,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"> </script>
 
-<script src="js/dom.js"></script>
+<script src="js/metodosstring.js"></script>
 </html>
