@@ -15,14 +15,15 @@
 
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">encabezado</div>
+        <div class="encabezado-ejem para">Qué es una Clase</div>
 
         <!-- Fila 1 -->
         <div class="celda-ejem">
               <pre class="prettyprint">
               <code>
-                  let now = new Date();
-                  console.log(now); // Muestra la fecha y hora actuales
+                  class Persona {
+                    //cuerpo de la clase
+                  }
               </code>
             </pre>
         </div>
@@ -35,21 +36,79 @@
 
       <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">encabezado</div>
+        <div class="encabezado-ejem para">Qué es un objeto</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
             <pre class="prettyprint">
             <code>
-                let christmas = new Date('2024-12-25T00:00:00');
-                console.log(christmas); // Wed Dec 25 2024 00:00:00 GMT+0000 (UTC)
-            </code>
+              const Persona1 = new Persona (´Juan´,´Pérez´, 30);
+                
             </pre>
       </div>
        <!-- FIN Fila 1 -->
 
     </div>
  <!--  FIN TABLA 2 -->
+
+    <!-- TABLA 3 -->
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para"> Constructor</div>
+        
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+            <pre class="prettyprint">
+            <code>
+              class Persona {
+                constructor(nombre, edad) {
+                  this.nombre = nombre; // Inicializa la propiedad nombre
+                  this.edad = edad;     // Inicializa la propiedad edad}
+              }
+              const persona1 = new Persona("Ana", 25);
+              console.log(persona1.nombre); // Ana
+              console.log(persona1.edad);   // 25
+                
+            </pre>
+      </div>
+       <!-- FIN Fila 1 -->
+
+    </div>
+ <!--  FIN TABLA 3 -->
+
+     <!-- TABLA 4 -->
+
+     <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+        <div class="encabezado-ejem para"> Constructor con herencia</div>
+        
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+            <pre class="prettyprint">
+            <code>
+              class Animal {
+                constructor(nombre) {
+                  this.nombre = nombre; // Propiedad inicializada por el constructor}
+              }
+              
+              class Perro extends Animal {
+                constructor(nombre, raza) {
+                  super(nombre); // Llama al constructor de la clase base
+                  this.raza = raza; // Propiedad adicional}
+              }
+              
+              const miPerro = new Perro("Max", "Labrador");
+              console.log(miPerro.nombre); // Max
+              console.log(miPerro.raza);   // Labrador
+                
+            </pre>
+      </div>
+       <!-- FIN Fila 1 -->
+
+    </div>
+ <!--  FIN TABLA 4 -->
+
 
   <footer>
     <a href="./index.html" class="links funciones">Volver al índice</a>
