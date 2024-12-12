@@ -27,11 +27,10 @@ let cadenaDeBusqueda = "mundo";
 let resultado = cadena.startsWith(cadenaDeBusqueda, 7);
 console.log(resultado); // Imprime: true
 
-/* startsWith(searchValue, start) */
-let cadena2 = "Hola, mundo";
-let cadenaDeBusqueda2 = "mundo";
-let resultado2 = cadena2.startsWith(cadenaDeBusqueda2, 7);
-console.log(resultado2); // Imprime: true
+/* lastIndexOf() */
+const animales = ['perro', 'gato', 'pez', 'perro', 'pájaro'];
+const ultimoPerro = animales.lastIndexOf('perro');
+console.log(ultimoPerro); // Imprime: 3
 
 /* .replace(searchValue, newValue) */
 let texto5 = "Hola Mundo"; 

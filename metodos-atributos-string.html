@@ -120,16 +120,15 @@
 
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">startsWith(searchValue, start)</div>
+      <div class="encabezado-ejem para">lastIndexOf()</div>
   
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let cadena2 = "Hola, mundo";
-          let cadenaDeBusqueda2 = "mundo";
-          let resultado2 = cadena2.startsWith(cadenaDeBusqueda2, 7);
-          console.log(resultado2); // Imprime: true
+          const animales = ['perro', 'gato', 'pez', 'perro', 'pájaro'];
+          const ultimoPerro = animales.lastIndexOf('perro');
+          console.log(ultimoPerro); // Imprime: 3
         </code>
         </pre>
       </div>
