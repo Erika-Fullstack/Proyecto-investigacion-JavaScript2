@@ -19,7 +19,7 @@
         <pre class="prettyprint">
         <code>
           const numeros = [1, 2, 3, 4, 5];
-           const duplicados = numeros.map(numero => numero * 2);
+           const duplicados = numeros.map(numero =&gt; numero * 2);
            console.log(duplicados);  // [2, 4, 6, 8, 10]
 
        // Ejemplo práctico: formatear datos de usuarios
@@ -29,7 +29,7 @@
 	         { nombre: "Pedro", edad: 28 }
      ];
 
-    const nombresFormateados = usuarios.map(usuario => {
+    const nombresFormateados = usuarios.map(usuario =&gt; {
 	      return {
     	      nombreCompleto: usuario.nombre.toUpperCase(),
     	      añoNacimiento: new Date().getFullYear() - usuario.edad
@@ -45,6 +45,7 @@
 
         </code>
         </pre>
+        </div>
       </div>
 
       <div class="tabla-grid">
@@ -57,7 +58,7 @@
         <code>
           // Ejemplo: filtrar números pares
           const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-          const pares = numeros.filter(numero => numero % 2 === 0);
+          const pares = numeros.filter(numero =&gt; numero % 2 === 0);
           console.log(pares);  // [2, 4, 6, 8, 10]
           
           // Ejemplo práctico: filtrar productos por precio
@@ -68,7 +69,7 @@
             { nombre: "Smartwatch", precio: 150 }
           ];
           
-          const productosEconomicos = productos.filter(producto => producto.precio < 400);
+          const productosEconomicos = productos.filter(producto =&gt; producto.precio &lt; 400);
           console.log(productosEconomicos);
           // [
           //   { nombre: "Tablet", precio: 300 },
@@ -77,6 +78,7 @@
           
         </code>
       </pre>
+      </div>
       </div>
 
           <div class="tabla-grid">
@@ -89,7 +91,7 @@
               <code>
                 // Ejemplo básico: sumar números
                 const numeros = [1, 2, 3, 4, 5];
-                const suma = numeros.reduce((acumulador, actual) => acumulador + actual, 0);
+                const suma = numeros.reduce((acumulador, actual) =&amp;gt; acumulador + actual, 0);
                 console.log(suma);  // 15
                 
                 // Ejemplo práctico: agrupar objetos por una propiedad
@@ -100,7 +102,7 @@
                   { producto: "Pan", categoria: "Alimentos", monto: 3 }
                 ];
                 
-                const ventasPorCategoria = ventas.reduce((acc, venta) => {
+                const ventasPorCategoria = ventas.reduce((acc, venta) =&gt; {
                   if (!acc[venta.categoria]) {
                       acc[venta.categoria] = 0;
                   }
@@ -118,6 +120,7 @@
               </code>
             </pre>
             </div>
+            </div>
 
                 <div class="tabla-grid">
                   <!-- encabezado-ejem paras -->
@@ -128,13 +131,14 @@
                     <pre class="prettyprint">
                     <code>
                       const numeros = [1, 2, 3];
-                      numeros.foreach (num => console.log (num)); 
+                      numeros.foreach (num =&gt; console.log (num)); 
                       // IMPRIME:
                      // 1
                     // 2
                    // 3
                   </code>
                 </pre>
+                </div>
               </div>
                  
    <footer>
