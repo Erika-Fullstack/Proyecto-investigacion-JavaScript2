@@ -53,3 +53,22 @@ let objeto = {
     //codigo
   },
 };
+
+
+
+
+const proto = { 
+  greet: function() { 
+    return "Hello"; 
+  } 
+};
+
+const obj = Object.create(proto);
+console.log(obj.greet()); 
+// "Hello"
+
+
+
+const target = { a: 1 };
+const source = { b: 2, c: 3 };
+const result = Object.assign(target, source);
