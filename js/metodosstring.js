@@ -28,9 +28,9 @@ let resultado = cadena.startsWith(cadenaDeBusqueda, 7);
 // console.log(resultado); Imprime: true
 
 /* lastIndexOf() */
-const animales = ['perro', 'gato', 'pez', 'perro', 'pájaro'];
-const ultimoPerro = animales.lastIndexOf('perro');
-//console.log(ultimoPerro);  Imprime: 3
+const parrafo = "El rápido zorro marrón salta sobre el perro perezoso.";
+const ultimaPosicion = parrafo.lastIndexOf("el");
+//console.log(ultimaPosicion);  Imprimirá: 31
 
 /* .replace(searchValue, newValue) */
 let texto5 = "Hola Mundo"; 
