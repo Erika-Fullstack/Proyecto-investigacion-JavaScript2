@@ -22,8 +22,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-            let now = new Date();
-            console.log(now); // Muestra la fecha y hora actuales
+        let fecha1 = new Date();
+        console.log(now); // Muestra la fecha y hora actuales
         </code>
       </pre>
        </div>
@@ -53,9 +53,8 @@
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>
-            let customDate = new Date(2024, 11, 25, 10, 30, 15); 
-            console.log(customDate); // Wed Dec 25 2024 10:30:15 GMT+0000 (UTC)
-
+            let fecha2 = new Date('10/26/1996');
+            console.log('La fecha de hoy es: ' + fecha2);
                 </code>
             </pre>
         </div>
@@ -79,20 +78,6 @@
         </div>
     </div>
 
-    <div class="tabla-grid">
-        <!-- encabezado-ejem tipos -->
-        <div class="encabezado-ejem tipos">Instanciar fecha específica</div>
-
-        <!-- Fila 1 -->
-        <div class="celda-ejem">
-            <pre class="prettyprint">
-                <code>
-            let christmas = new Date('2024-12-25T00:00:00');
-            console.log(christmas); // Wed Dec 25 2024 00:00:00 GMT+0000 (UTC)
-                </code>
-            </pre>
-        </div>
-    </div>
 
     <h3>Métodos</h3>
 
@@ -104,12 +89,14 @@
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>
-        let date = new Date();
+        // Funciones especiales
+        let fecha2 = new Date('10/26/1996');
 
-    console.log(date.getFullYear()); // Año actual, ej. 2024
-    console.log(date.getMonth());    // Mes (0-11), ej. 11 tipos diciembre
-    console.log(date.getDate());     // Día del mes (1-31)
-    console.log(date.getDay());      // Día de la semana (0-6), ej. 0 tipos domingo
+          let dia = fecha2.getDate();
+          let mes = fecha2.getMonth();
+          let anio = fecha2.getFullYear();
+                    
+        console.log("Día: " + dia + " Mes: " + (mes+1) + " Año: " + anio);
     
                 </code>
             </pre>
@@ -190,40 +177,6 @@
         </div>
     </div>
 
-    <h3>Ejemplos con Fechas</h3>
-    <div class="tabla-grid">
-        <!-- encabezado-ejem tipos -->
-        <div class="encabezado-ejem tipos">Ejemplos</div>
-
-        <!-- Fila 1 -->
-        <div class="celda-ejem">
-            <pre class="prettyprint">
-                <code>                  
-    let now = new Date();
-    console.log("Fecha actual:", now.toString()); // Muestra la fecha actual
-                    
-    // Cambiar fecha
-    now.setFullYear(2025);
-    now.setMonth(0); // Enero
-    now.setDate(15);
-    console.log("Fecha modificada:", now.toDateString());
-    // Muestra fecha modificada
-                   
-    // Compara fechas
-    let anotherDate = new Date('2025-01-15');
-    console.log("¿Son iguales?", now.getTime() === anotherDate.getTime());
-    // true
-                  
-    // Calcular días entre dos fechas
-    let startDate = new Date('2024-12-01');
-    let endDate = new Date('2024-12-25');
-    let daysDifference = (endDate - startDate) / (1000 * 60 * 60 * 24);
-    console.log(`Diferencia en días: ${daysDifference}`); // 24 días                                                 
-                </code>
-            </pre>
-        </div>
-    </div>
-
                  <!-- CLASE MATH -->
     <h2>Clase Math</h2>
 
@@ -255,9 +208,17 @@
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>                  
-    console.log(Math.round(4.6));   // 5 (redondeo al entero más cercano)
-    console.log(Math.ceil(4.2));    // 5 (redondeo hacia arriba)
-    console.log(Math.floor(4.8));   // 4 (redondeo hacia abajo)         
+     //Redondea a siguiente entero decimal .5
+    let precio = Math.round(399.53);
+    console.log('Precio redondeado: ', precio);
+               
+     //Redondear sin importar decimal hacia arriba
+    let precio2 = Math.ceil(299.9);
+    console.log('precio redondeado: ', precio2);
+                    
+    //Redondea sin importar decimal hacia abajo
+    let precio3 = Math.floor(540.6)
+    console.log('Precio redondeado: ',precio3);
                 </code>
             </pre>
         </div>
@@ -287,13 +248,10 @@
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>                  
-     console.log(Math.random()); // Número aleatorio entre 0 y 1
-
-     // Número aleatorio entre 1 y 10
-     let random = Math.floor(Math.random() * 10) + 1;
-     console.log(random); // Ejemplo: 7
-                         
-                </code>
+    //Traer en pantalla un valor aleatorio
+    
+    let aleatorio = Math.round(math.random()*10);
+    console.log('valor aleatorio: ', aleatorio);                </code>
             </pre>
         </div>
     </div>
@@ -306,10 +264,18 @@
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>                  
-    console.log(Math.abs(-5));        // 5 (valor absoluto)
-    console.log(Math.max(1, 5, 10));  // 10 (mayor valor)
-    console.log(Math.min(1, 5, 10));  // 1 (menor valor)                      
-                </code>
+
+    //Valor absoluto
+      let absoluto = -5  
+      console.log(Math.abs(absoluto)); 
+
+    //Calcular valor maximo de secuencia
+      let maximo = Math.max(10,50,600,1,8);
+      console.log('mayor valor: ',maximo);
+
+    //Calcular valor maximo de secuencia
+      let minimo = Math.min(10,50,600,1,8);
+      console.log('menor valor: ',maximo);                    </code>
             </pre>
         </div>
     </div>
@@ -324,9 +290,7 @@
                 <code>                  
      console.log(Math.sin(Math.PI / 2)); // 1 (seno de π/2)
      console.log(Math.cos(0));          // 1 (coseno de 0)
-    console.log(Math.tan(Math.PI / 4)); // 1 (tangente de π/4)
-                     
-                </code>
+    console.log(Math.tan(Math.PI / 4)); // 1 (tangente de π/4)           </code>
             </pre>
         </div>
     </div>
@@ -344,8 +308,7 @@
             <pre class="prettyprint">
                 <code>                  
         let arr1 = [1, 2, 3, 4, 5];
-        console.log(arr1); // [1, 2, 3, 4, 5] 
-                </code>
+        console.log(arr1); // [1, 2, 3, 4, 5] </code>
             </pre>
         </div>
     </div>
@@ -357,14 +320,14 @@
         <!-- Fila 1 -->
         <div class="celda-ejem">
             <pre class="prettyprint">
-                <code>                  
-let arr2 = new Array(5); 
-// Crea un array con 5 espacios vacíos
+                <code>     
+     // Crea un array con 5 espacios vacíos             
+    let arr2 = new Array(5); 
 
-console.log(arr2); // [ 5 empty items ]
+    console.log(arr2); // [ 5 empty items ]
                 
-let arr3 = new Array(1, 2, 3); // Crea un array con valores iniciales
-console.log(arr3); // [1, 2, 3]                    
+    let arr3 = new Array(1, 2, 3); // Crea un array con valores iniciales
+    console.log(arr3); // [1, 2, 3]                    
                 </code>
             </pre>
         </div>
@@ -377,18 +340,17 @@ console.log(arr3); // [1, 2, 3]
         <!-- Fila 1 -->
         <div class="celda-ejem">
             <pre class="prettyprint">
-                <code>                  
-let str = "Hola";
-let arrFromStr = Array.from(str);
-// Convierte una cadena en un array de caracteres
-
-console.log(arrFromStr); // ['H', 'o', 'l', 'a']
-                    
-let arrFromSet = Array.from(new Set([1, 2, 2, 3]));
-// Convierte un Set en un array
-
-console.log(arrFromSet); // [1, 2, 3]                 
-                </code>
+                <code>
+      // Convierte una cadena en un array de caracteres                  
+    let str = "Hola";
+    let arrFromStr = Array.from(str);
+    
+    console.log(arrFromStr); // ['H', 'o', 'l', 'a']
+      
+    // Convierte un Set en un array            
+    let arrFromSet = Array.from(new Set([1, 2, 2, 3]));
+    
+    console.log(arrFromSet); // [1, 2, 3]                 </code>
             </pre>
         </div>
     </div>
@@ -404,9 +366,8 @@ console.log(arrFromSet); // [1, 2, 3]
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>                  
-            let str1 = "Hola, mundo!";
-            console.log(str1); // Hola, mundo!     
- </code>
+    let str1 = "Hola, mundo!";
+    console.log(str1); // Hola, mundo!    </code>
             </pre>
         </div>
     </div>
@@ -419,9 +380,8 @@ console.log(arrFromSet); // [1, 2, 3]
         <div class="celda-ejem">
             <pre class="prettyprint">
                 <code>                  
-             let str2 = new String("Hola, mundo!");
-             console.log(str2); // [String: 'Hola, mundo!']                     
-                </code>
+    let str2 = new String("Hola, mundo!");
+    console.log(str2); // [String: 'Hola, mundo!']                     </code>
             </pre>
         </div>
     </div>
