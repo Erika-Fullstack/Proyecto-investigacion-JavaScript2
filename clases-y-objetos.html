@@ -42,7 +42,7 @@
       <div class="celda-ejem">
             <pre class="prettyprint">
             <code>
-              const Persona1 = new Persona ("Gorka","Pérez", 30);
+              const Persona = new Persona ("Gorka","Pérez", 30);
             </code>
             </pre>
       </div>
@@ -50,6 +50,35 @@
 
     </div>
  <!--  FIN TABLA 2 -->
+
+  <!-- TABLA 3 -->
+
+  <div class="tabla-grid">
+    <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para"> This</div>
+      
+    <!-- Fila 1 -->
+    <div class="celda-ejem">
+          <pre class="prettyprint">
+          <code>
+            class Persona {
+              constructor(nombre, edad) {
+                this.nombre = nombre; // "this" se refiere a la instancia actual de la clase
+            }
+
+          Presentarse() {
+            console.log ("Me llamo $ {this.nombre}");
+          }
+        }
+            const persona1 = new Persona("Pedro");
+            persona.presentarse(); //Me llamo Pedro
+          </code>
+          </pre>
+    </div>
+     <!-- FIN Fila 1 -->
+
+  </div>
+<!--  FIN TABLA 3 -->
 
     <!-- TABLA 3 -->
 
