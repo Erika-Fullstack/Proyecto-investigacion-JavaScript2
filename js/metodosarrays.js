@@ -60,6 +60,21 @@ let frutas2 = ["banana", "uva"];
 let todas = frutas1.concat(frutas2);
 // ["manzana", "banana", "banana", "uva"]
 
+/* .splice(indice, borrar, añade elemento) */
+
+frutas = ["manzana", "banana", "naranja"];
+
+frutas.splice(2, 0, "Limón", "Kiwi"); 
+// En la posicion 2 donde está "banana", 
+// 0 borrados, añade "Limón" and "Kiwi"
+// [ "manzana", "banana", "Limón", "Kiwi", "naranja" ]
+
+seleccion = frutas.splice(2, 2); 
+// En la posicion 2 borra 2 elementos.
+console.log(seleccion)                              // nos devuelve un array con lo borrado
+// ["Limón", "Kiwi"]
+
+
 /* .lastIndexof() */
 
 frutas2.lastIndexOf("banana"); 

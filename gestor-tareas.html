@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizador de Tareas</title>
+  <link rel="stylesheet" href="css/gestor-tareas.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Organizador de Tareas</h1>
+    <div class="form-tarea">
+      <input type="text" id="descripcion" placeholder="Descripción de la tarea" />
+      <input type="date" id="fechaLimite" />
+     
+        <input type="checkbox" id="esImportante" /> 
+        <label> Importante   </label>
+   
+      <textarea id="notas" rows="3" placeholder="Añade notas opcionales"></textarea>
+      <button onclick="agregarTarea()">Agregar Tarea</button>
+    </div>
+
+    <h2>Lista de Tareas</h2>
+    <div id="listaTareas"></div>
+
+    <h2>Estadísticas</h2>
+    <div id="estadisticasTareas"></div>
+  </div>
+  <script src="js/gestor-tareas.js"></script>
+</body>
+</html>
