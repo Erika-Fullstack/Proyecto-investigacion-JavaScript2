@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h2>..</h2>
+    <h2>Clases y objetos</h2>
 
     <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
 
@@ -44,7 +44,7 @@
       <div class="celda-ejem">
             <pre class="prettyprint">
             <code>
-              class Persona {
+              class PersonaObjeto {
                 constructor(nombre, apellido, edad) {
                   this.nombre = nombre;
                   this.apellido = apellido;
@@ -52,7 +52,7 @@
                 }
               }
               
-              const persona = new Persona("Gorka", "Pérez", 30);
+              const persona = new PersonaObjeto("Gorka", "Pérez", 30);
               console.log(persona); // Persona { nombre: 'Gorka', apellido: 'Pérez',edad: 30 }
             </code>
             </pre>
@@ -72,7 +72,7 @@
     <div class="celda-ejem">
           <pre class="prettyprint">
           <code>
-            class Persona {
+            class PersonaThis {
               constructor(nombre, edad) {
                 this.nombre = nombre; // "this" se refiere a la instancia actual
                 this.edad = edad;
@@ -83,7 +83,7 @@
               }
             }
             
-            const persona1 = new Persona("Pedro", 30);
+            const persona1 = new PersonaThis("Pedro", 30);
             persona1.presentarse(); // Me llamo Pedro
           </code>
           </pre>
@@ -97,21 +97,21 @@
 
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para"> Uso de Constructoctores</div>
+        <div class="encabezado-ejem para"> Uso de Constructores</div>
         
       <!-- Fila 4 -->
       <div class="celda-ejem">
             <pre class="prettyprint">
             <code>
-              class Persona {
+              class PersonaConstructor {
                 constructor(nombre, edad) {
                   this.nombre = nombre; // Inicializa la propiedad nombre
                   this.edad = edad;     // Inicializa la propiedad edad
                 }
               }
               
-              const persona1 = new Persona("Pedro", 30);
-              console.log(persona1.nombre); // Pedro
+              const persona1 = new PersonaConstructor("Pedro", 30);
+              console.log(persona1.nombre); // Alex
               console.log(persona1.edad);   // 30
             </code>
             </pre>
@@ -131,22 +131,41 @@
       <div class="celda-ejem">
             <pre class="prettyprint">
             <code>
-              class Animal {
-                constructor(nombre) {
-                  this.nombre = nombre; // Propiedad inicializada por el constructor
-                }
-              }
-              
-              class Perro extends Animal {
-                constructor(nombre, raza) {
-                  super(nombre); // Llama al constructor de la clase base
-                  this.raza = raza; // Propiedad adicional
-                }
-              }
-              
-              const miPerro = new Perro("Thor", "Labrador");
-              console.log(miPerro.nombre); // Thor
-              console.log(miPerro.raza);   // Labrador
+          // Clase base
+          class Animal {
+          constructor(nombre) {
+            this.nombre = nombre; // Inicializa el nombre en la clase base
+          }
+
+          // Método en la clase base
+          hacerSonido() {
+            console.log("El animal hace un sonido");
+          }
+        }
+
+        // Clase hija que extiende de Animal
+        class Perro extends Animal {
+          constructor(nombre, raza) {
+            super(nombre); // Llama al constructor de la clase base
+            this.raza = raza; // Agrega una propiedad específica de Perro
+          }
+
+          // Método adicional en la clase hija
+          ladrar() {
+            console.log(`${this.nombre} está ladrando.`);
+          }
+        }
+
+        // Crear una instancia de Perro
+        const miPerro = new Perro("Thor", "Labrador");
+
+        // Uso de las propiedades y métodos
+        console.log(miPerro.nombre); // Thor (heredado de Animal)
+        console.log(miPerro.raza);   // Labrador (propiedad de Perro)
+
+        miPerro.hacerSonido(); // El animal hace un sonido (método heredado)
+        miPerro.ladrar();      // Thor está ladrando. (método específico de Perro)
+
             </code>
             </pre>
       </div>
