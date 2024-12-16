@@ -31,6 +31,21 @@ Object.freeze(persona4);
 persona4.contactos.email = "ana@newmail.com";
 //console.log(persona4.contactos.email);
 
+persona = { nombre: "Ana" }; 
+Object.freeze(persona);
+
+
+
+Object.isFrozen(persona)
+//true
+
+
+persona.nombre = "Juana";
+// Nos da error en "strict mode"
+
+console.log(persona.nombre);
+// "Ana"
+
 /* .hasOwnProperty(key) */
 let persona5 = { nombre: "Juan" };
 //console.log(persona5.hasOwnProperty("nombre"));  true
@@ -72,3 +87,5 @@ const obj = Object.create(proto);
 const target = { a: 1 };
 const source = { b: 2, c: 3 };
 const result = Object.assign(target, source);
+
+
