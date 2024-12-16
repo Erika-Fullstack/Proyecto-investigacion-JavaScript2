@@ -1,5 +1,5 @@
-const numeros = [1, 2, 3, 4, 5];
-const duplicados = numeros.map(numero => numero * 2);
+const numeros1 = [1, 2, 3, 4, 5];
+const duplicados = numeros1.map(numero => numero * 2);
 console.log(duplicados);  // [2, 4, 6, 8, 10]
 
 // Ejemplo práctico: formatear datos de usuarios
@@ -23,8 +23,8 @@ console.log(nombresFormateados);
 //   { nombreCompleto: "PEDRO", añoNacimiento: 1996 }
 // ]
 
-const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const pares = numeros.filter(numero => numero % 2 === 0);
+const numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const pares = numeros2.filter(numero => numero % 2 === 0);
 console.log(pares);  // [2, 4, 6, 8, 10]
 
 // Ejemplo práctico: filtrar productos por precio
@@ -42,8 +42,8 @@ console.log(productosEconomicos);
 //   { nombre: "Smartwatch", precio: 150 }
 // ]
 
-const numeros = [1, 2, 3, 4, 5];
-const suma = numeros.reduce((acumulador, actual) => acumulador + actual, 0);
+const numeros3 = [1, 2, 3, 4, 5];
+const suma = numeros3.reduce((acumulador, actual) => acumulador + actual, 0);
 console.log(suma);  // 15
 
 // Ejemplo práctico: agrupar objetos por una propiedad
