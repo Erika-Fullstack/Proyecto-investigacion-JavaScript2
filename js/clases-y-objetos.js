@@ -1,9 +1,11 @@
 //que es una clase
 
 class Persona {
-    //Una clase es un molde para crear objetos
-  }
-  const ejemplo = new Persona();
+  //Una clase es un molde para crear objetos
+  //La clase no crea nada por sí sola.Necesitas instanciar para crear objetos.
+}
+const ejemplo = new Persona();
+
 
   //que es un objeto
 
@@ -14,9 +16,10 @@ class Persona {
       this.edad = edad;
     }
   }
-  
+              
   const persona = new PersonaObjeto("Gorka", "Pérez", 30);
 
+  
   //uso de this
 
   class PersonaThis {
@@ -25,25 +28,26 @@ class Persona {
       this.edad = edad;
     }
   
-    presentarse() {
-      console.log(`Me llamo ${this.nombre}`);
-    }
+    presentarse() 
   }
   
   const persona1 = new PersonaThis("Pedro", 30);
+  persona1.presentarse(); // Me llamo Pedro
+
 
   //datos primitivos en clases
 
-  class Persona {
+  class PersonaClases {
     constructor(nombre) {
-      this.nombre = nombre;
+      this.nombre = nombre;//Asignación de un valor primitivo
     }
   }
   
-  let p1 = new Persona("Carlos");
-  let p2 = new Persona("María");
+  let p1 = new PersonaClases("Carlos");
+  let p2 = new PersonaClases("María");
   
   p1.nombre = "Pedro";  // Cambia solo el nombre de p1
+  
 
   //Uso de constructores
 
@@ -56,31 +60,34 @@ class Persona {
   
   const persona1 = new PersonaConstructor("Pedro", 30);
 
-  //constructores con herencia
 
-   // Clase base
-   class Animal {
-    constructor(nombre) {
-      this.nombre = nombre; // Inicializa el nombre en la clase base
-    }
+//constructores con herencia
 
-    // Método en la clase base
-    hacerSonido() 
+// Clase base
+class Animal {
+  constructor(nombre) {
+    this.nombre = nombre; // Inicializa el nombre en la clase base
   }
 
-  // Clase hija que extiende de Animal
-  class Perro extends Animal {
-    constructor(nombre, raza) {
-      super(nombre); // Llama al constructor de la clase base
-      this.raza = raza; // Agrega una propiedad específica de Perro
-    }
+  // Método en la clase base
+  hacerSonido() 
+  
+}
 
-    // Método adicional en la clase hija
-    ladrar() 
+// Clase hija que extiende de Animal
+class Perro extends Animal {
+  constructor(nombre, raza) {
+    super(nombre); // Llama al constructor de la clase base
+    this.raza = raza; // Agrega una propiedad específica de Perro
   }
 
-  // Crear una instancia de Perro
-  const miPerro = new Perro("Thor", "Labrador");
+  // Método adicional en la clase hija
+  ladrar() 
+  
+}
 
-  miPerro.hacerSonido(); // El animal hace un sonido (método heredado)
-  miPerro.ladrar();      // Thor está ladrando. (método específico de Perro)
+// Crear una instancia de Perro
+const miPerro = new Perro("Thor", "Labrador");
+
+miPerro.hacerSonido(); // El animal hace un sonido (método heredado)
+miPerro.ladrar();      // Thor está ladrando. (método específico de Perro)

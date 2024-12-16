@@ -23,6 +23,7 @@
               <code>
                   class Persona {
                     //Una clase es un molde para crear objetos
+                    //La clase no crea nada por sí sola.Necesitas instanciar para crear objetos.
                   }
                   const ejemplo = new Persona();
                   console.log(ejemplo); // Instancia vacía de la clase Persona
@@ -79,7 +80,7 @@ class PersonaObjeto {
               }
             
               presentarse() {
-                console.log(`Me llamo ${this.nombre}`);
+                console.log(`Me llamo ${this.nombre}`); //Accede a la propiedad "nombre" de la instancia
               }
             }
             
@@ -103,14 +104,14 @@ class PersonaObjeto {
   <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          class Persona {
+          class PersonaClases {
             constructor(nombre) {
-              this.nombre = nombre;
+              this.nombre = nombre;//Asignación de un valor primitivo
             }
           }
           
-          let p1 = new Persona("Carlos");
-          let p2 = new Persona("María");
+          let p1 = new PersonaClases("Carlos");
+          let p2 = new PersonaClases("María");
           
           p1.nombre = "Pedro";  // Cambia solo el nombre de p1
           
@@ -144,7 +145,7 @@ class PersonaObjeto {
               }
               
               const persona1 = new PersonaConstructor("Pedro", 30);
-              console.log(persona1.nombre); // Alex
+              console.log(persona1.nombre); // Pedro
               console.log(persona1.edad);   // 30
             </code>
             </pre>
