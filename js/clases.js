@@ -4,7 +4,7 @@ let fecha1 = new Date();
 let christmas = new Date('2024-12-25T00:00:00');
 // console.log(christmas); // Wed Dec 25 2024 00:00:00 GMT+0000 (UTC)
 
-let fecha3 = new Date('10/26/1996');
+let fecha2 = new Date('10/26/1996');
 // console.log('La fecha de hoy es: ' + fecha3);
 
 let fromTimestamp = new Date(1672444800000); 
@@ -73,7 +73,7 @@ let piValue = Math.PI;
 
  //Traer en pantalla un valor aleatorio
     
- let aleatorio = Math.round(math.random()*10);
+ let aleatorio = Math.round(Math.random()*10);
  console.log('valor aleatorio: ', aleatorio);
 
 
