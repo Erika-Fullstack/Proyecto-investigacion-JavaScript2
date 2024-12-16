@@ -40,9 +40,10 @@ let texto5 = "Hola Mundo";
 let texto6 = "Hola,Mundo"; 
 // console.log(texto6.split(",")); ["Hola", "Mundo"]
 
-/* .charAt(index) */
-let texto7 = "hola"; 
-//console.log(texto7.charAt(1));  "o"
+/* .capitalize() */
+const nombre = "juan";
+const nombreCapitalizado = capitalize(nombre);
+// console.log(nombreCapitalizado); Imprimirá: "Juan"
 
 /* [index] */
 let texto8 = "hola"; 
