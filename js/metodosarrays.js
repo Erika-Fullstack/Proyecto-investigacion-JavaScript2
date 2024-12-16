@@ -40,7 +40,6 @@ let seleccion = frutas.slice(0, 2);
 let todas = frutas1.concat(frutas2);
 // ["manzana", "banana", "banana", "uva"]
 
-<<<<<<< HEAD
 /* .splice(indice, borrar, añade elemento) */
 
 frutas = ["manzana", "banana", "naranja"];
@@ -57,9 +56,6 @@ console.log(seleccion)                              // nos devuelve un array con
 
 
 /* .lastIndexof() */
-=======
-/* .lastIndexof()
->>>>>>> 5766e92 (metodos.js)
 
 frutas2.lastIndexOf("banana"); 
 // 2
