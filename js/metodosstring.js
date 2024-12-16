@@ -4,15 +4,15 @@ let texto = "Hola Mundo";
 
 /* .toUpperCase() */
 texto = "Hola Mundo"; 
-//console.log(texto.toUpperCase());  "HOLA" 
+//console.log(texto.toUpperCase());  "HOLA MUNDO" 
 
 /* .toLowerCase() */
 texto = "Hola Mundo"; 
-//console.log(texto.toLowerCase());  "hola"
+//console.log(texto.toLowerCase());  "hola mundo"
 
 /* .trim() */
 texto = "  Hola  Mundo  "; 
-// console.log(texto.trim()); "Hola"
+// console.log(texto.trim()); "Hola Mundo"
 
 /* .indexOf */
 texto = "Hola Mundo"; 
