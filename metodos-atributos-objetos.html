@@ -8,12 +8,12 @@
 </head>
 
 <body>
-    <h2>Métodos y Atributos de Objetos</h2>
+    <h1>Métodos y Atributos de Objetos</h1>
 
     <!-- Tabla css-grid. Para 2 columnas usar la clase combinada class= "tabla-grid col-02" para 3 col-03-->
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">.keys()</div>
+      <div class="encabezado-ejem para">Object.keys()</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
@@ -28,7 +28,7 @@
 
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">.values()</div>
+      <div class="encabezado-ejem para">Object.values()</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
@@ -43,7 +43,7 @@
 
     <div class="tabla-grid">
         <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">.entries()</div>
+        <div class="encabezado-ejem para">Object.entries()</div>
   
         <!-- Fila 1 -->
         <div class="celda-ejem">
@@ -59,7 +59,7 @@
 
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">.assign()</div>
+      <div class="encabezado-ejem para">Object.assign()</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
@@ -76,24 +76,17 @@
 
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">.freeze()</div>
+      <div class="encabezado-ejem para">Object.valueOf()</div>
 
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          const persona4 = {
-            nombre: "Ana",
-            contactos: {
-              telefono: "1234567890",
-              email: "ana@example.com"
-            }
-          };
-          
-          Object.freeze(persona4);
 
-          persona4.contactos.email = "ana@newmail.com";
-          console.log(persona4.contactos.email);
+          const keys = Object.keys(objeto);
+          console.log(keys);
+          // ["a", "b", "c"]
+
         </code>
         </pre>
       </div>
@@ -107,8 +100,30 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let persona5 = { nombre: "Juan" }; 
-          console.log(persona5.hasOwnProperty("nombre")); // true
+          let persona = { nombre: "Juan" }; 
+          console.log(persona.hasOwnProperty("nombre")); 
+          // true
+        </code>
+        </pre>
+      </div>
+    </div>
+
+    <div class="tabla-grid">
+      <!-- encabezado-ejem paras -->
+      <div class="encabezado-ejem para">Object.freeze()</div>
+
+      <!-- Fila 1 -->
+      <div class="celda-ejem">
+        <pre class="prettyprint">
+        <code>
+          let persona = { nombre: "Juan" }; 
+          Object.freeze(persona);
+          
+          persona.nombre = "Juana";
+          // Nos da error en "strict mode"
+          
+          console.log(persona.nombre);
+          // "Juan"
         </code>
         </pre>
       </div>

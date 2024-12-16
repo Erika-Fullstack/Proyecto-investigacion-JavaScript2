@@ -1,72 +1,72 @@
-/* .length */
 let numeros = [1, 2, 3]; 
+let letras = ["b", "a", "c"]; 
+let frutas = ["manzana", "banana", "naranja"];
+let frutas2 = ["banana", "uva"];
+
+
+/* .length 
 console.log(numeros.length); 
 // 3
 
-/* .push() */
-let numeros1 = [1, 2]; 
-numeros1.push(3); 
+/* .push() 
+numeros.push(3); 
 // [1, 2, 3] 
 
-/* .unshift() */
-let numeros2 = [2, 3]; 
+/* .unshift() 
 numeros2.unshift(1); 
 // [1, 2, 3]
 
-/* .shift() */
-let numeros3 = [1, 2, 3] 
-numeros3.shift(); 
+/* .shift() 
+numeros.shift(); 
 // [2, 3]
 
-/* .sort() */
-let letras = ["b", "a", "c"]; 
+/* .sort() 
+
 console.log(letras.sort());
 // ["a", "b", "c"]
 
-/* .reverse() */
-let numeros4 = [1, 2, 3]; 
-console.log(numeros4.reverse()); 
+/* .reverse() 
+
+numeros.reverse(); 
 // [3, 2, 1]
 
-/* .map() */
-let numeros5 = [1, 2, 3]; 
-console.log(numeros5.map(x => x * 2)); 
-// [2, 4, 6]
-
-/* .filter() */
-let numeros6 = [1, 2, 3, 4]; 
-console.log(numeros6.filter(x => x % 2 === 0));
-// [2, 4]
-
-/* .reduce() */
-let numeros7 = [1, 2, 3]; 
-console.log(numeros7.reduce((acc, x) => acc + x, 0)); 
-// 6
-
-
-
-
-
-let frutas = ["manzana", "banana", "naranja"];
-
-/* .slice() */
+/* .slice() 
 
 let seleccion = frutas.slice(0, 2);
 // ["manzana", "banana"]
 
-/* .concat() */
+/* .concat() 
 
-let frutas2 = ["banana", "uva"];
 let todas = frutas1.concat(frutas2);
 // ["manzana", "banana", "banana", "uva"]
 
+<<<<<<< HEAD
+/* .splice(indice, borrar, añade elemento) */
+
+frutas = ["manzana", "banana", "naranja"];
+
+frutas.splice(2, 0, "Limón", "Kiwi"); 
+// En la posicion 2 donde está "banana", 
+// 0 borrados, añade "Limón" and "Kiwi"
+// [ "manzana", "banana", "Limón", "Kiwi", "naranja" ]
+
+seleccion = frutas.splice(2, 2); 
+// En la posicion 2 borra 2 elementos.
+console.log(seleccion)                              // nos devuelve un array con lo borrado
+// ["Limón", "Kiwi"]
+
+
 /* .lastIndexof() */
+=======
+/* .lastIndexof()
+>>>>>>> 5766e92 (metodos.js)
 
 frutas2.lastIndexOf("banana"); 
 // 2
 
 
-/* .includes() */
+/* .includes() 
 
 frutas2.includes("banana"); 
 // true
+*/

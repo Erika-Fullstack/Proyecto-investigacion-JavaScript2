@@ -35,8 +35,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto1 = "Hola"; 
-          console.log(texto1.toUpperCase()); // "HOLA" 
+          let texto = "Hola Mundo"; 
+          console.log(texto.toUpperCase()); // "HOLA MUNDO" 
         </code>
         </pre>
       </div>
@@ -50,8 +50,8 @@
         <div class="celda-ejem">
           <pre class="prettyprint">
           <code>
-            let texto2 = "Hola"; 
-            console.log(texto2.toLowerCase()); // "hola"
+            let texto = "Hola Mundo"; 
+            console.log(texto.toLowerCase()); // "hola mundo"
           </code>
           </pre>
         </div>
@@ -65,8 +65,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto3 = " Hola "; 
-          console.log(texto3.trim()); // "Hola"
+          let texto = "  Hola  Mundo  ";
+          console.log(texto.trim()); // "Hola Mundo"
         </code>
         </pre>
       </div>
@@ -80,8 +80,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto4 = "Hola Mundo"; 
-          console.log(texto4.indexOf("Mundo")); // 5 
+          let texto = "Hola Mundo"; 
+          console.log(texto.indexOf("Mundo")); // 5 
         </code>
         </pre>
       </div>
@@ -128,7 +128,7 @@
         <code>
           const parrafo = "El rápido zorro marrón salta sobre el perro perezoso.";
           const ultimaPosicion = parrafo.lastIndexOf("el");
-          console.log(ultimaPosicion); // Imprimirá: 31
+          console.log(ultimaPosicion); // Imprimirá: 35
         </code>
         </pre>
       </div>
@@ -142,8 +142,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto5 = "Hola Mundo"; 
-          console.log(texto5.replace("Mundo", "Amigo")); // "Hola Amigo"
+          let texto = "Hola Mundo"; 
+          console.log(texto.replace("Mundo", "Amigo")); // "Hola Amigo"
         </code>
         </pre>
       </div>
@@ -157,8 +157,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto6 = "Hola,Mundo"; 
-          console.log(texto6.split(",")); // ["Hola", "Mundo"]
+          let texto = "Hola,Mundo"; 
+          console.log(texto.split(",")); // ["Hola", "Mundo"]
         </code>
         </pre>
       </div>
@@ -166,14 +166,15 @@
 
     <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-      <div class="encabezado-ejem para">.charAt(index)</div>
+      <div class="encabezado-ejem para">.capitalize()</div>
   
       <!-- Fila 1 -->
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto7 = "hola"; 
-          console.log(texto7.charAt(1)); // "o"
+          const nombre = "juan";
+          const nombreCapitalizado = capitalize(nombre);
+          console.log(nombreCapitalizado); // Imprimirá: "Juan"
         </code>
         </pre>
       </div>
@@ -187,8 +188,8 @@
       <div class="celda-ejem">
         <pre class="prettyprint">
         <code>
-          let texto8 = "hola"; 
-          console.log(texto8[1]); // "o"
+          let texto = "hola Mundo"; 
+          console.log(texto[1]); // "o"
         </code>
         </pre>
       </div>

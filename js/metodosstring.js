@@ -3,20 +3,20 @@ let texto = "Hola Mundo";
 //console.log(texto.length);  10
 
 /* .toUpperCase() */
-let texto1 = "Hola"; 
-//console.log(texto1.toUpperCase());  "HOLA" 
+texto = "Hola Mundo"; 
+//console.log(texto.toUpperCase());  "HOLA MUNDO" 
 
 /* .toLowerCase() */
-let texto2 = "Hola"; 
-//console.log(texto2.toLowerCase());  "hola"
+texto = "Hola Mundo"; 
+//console.log(texto.toLowerCase());  "hola mundo"
 
 /* .trim() */
-let texto3 = " Hola "; 
-// console.log(texto3.trim()); "Hola"
+texto = "  Hola  Mundo  "; 
+// console.log(texto.trim()); "Hola Mundo"
 
 /* .indexOf */
-let texto4 = "Hola Mundo"; 
-//console.log(texto4.indexOf("Mundo"));  5 
+texto = "Hola Mundo"; 
+//console.log(texto.indexOf("Mundo"));  5 
 
 /* includes */
 //console.log("Hola Mundo".includes("Mundo"));  true
@@ -30,20 +30,21 @@ let resultado = cadena.startsWith(cadenaDeBusqueda, 7);
 /* lastIndexOf() */
 const parrafo = "El rápido zorro marrón salta sobre el perro perezoso.";
 const ultimaPosicion = parrafo.lastIndexOf("el");
-//console.log(ultimaPosicion);  Imprimirá: 31
+//console.log(ultimaPosicion);  Imprimirá: 35
 
 /* .replace(searchValue, newValue) */
-let texto5 = "Hola Mundo"; 
-// console.log(texto5.replace("Mundo", "Amigo")); "Hola Amigo"
+texto = "Hola Mundo"; 
+// console.log(texto.replace("Mundo", "Amigo")); "Hola Amigo"
 
 /* split(separator) */
-let texto6 = "Hola,Mundo"; 
-// console.log(texto6.split(",")); ["Hola", "Mundo"]
+texto = "Hola,Mundo"; 
+// console.log(texto.split(",")); ["Hola", "Mundo"]
 
-/* .charAt(index) */
-let texto7 = "hola"; 
-//console.log(texto7.charAt(1));  "o"
+/* .capitalize() */
+const nombre = "juan";
+const nombreCapitalizado = capitalize(nombre);
+// console.log(nombreCapitalizado); Imprimirá: "Juan"
 
 /* [index] */
-let texto8 = "hola"; 
-//console.log(texto8[1]);  "o"
+texto = "Hola Mundo"; 
+//console.log(texto[1]);  "o"
