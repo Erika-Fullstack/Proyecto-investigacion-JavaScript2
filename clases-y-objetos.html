@@ -21,12 +21,12 @@
         <div class="celda-ejem">
               <pre class="prettyprint">
               <code>
-                  class Persona {
-                    //Una clase es un molde para crear objetos
-                    //La clase no crea nada por sí sola.Necesitas instanciar para crear objetos.
-                  }
-                  const ejemplo = new Persona();
-                  console.log(ejemplo); // Instancia vacía de la clase Persona
+            class Persona {
+            //Una clase es un molde para crear objetos
+            //La clase no crea nada por sí sola.Necesitas instanciar para crear objetos.
+            }
+            const ejemplo = new Persona();
+            console.log(ejemplo); // Instancia vacía de la clase Persona
               </code>
             </pre>
         </div>
@@ -35,33 +35,34 @@
     </div>
    <!-- FIN TABLA 1 -->
 
-   <!-- TABLA 2 -->
+    <!-- TABLA 2-->
 
-      <div class="tabla-grid">
+    <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para">¿Qué es un objeto?</div>
-
+        <div class="encabezado-ejem para"> Uso de Constructores</div>
+          
       <!-- Fila 2 -->
       <div class="celda-ejem">
             <pre class="prettyprint">
             <code>
-class PersonaObjeto {
-    constructor(nombre, apellido, edad) {
-      this.nombre = nombre;
-      this.apellido = apellido;
-      this.edad = edad;
-    }
-  }
-              
-  const persona = new PersonaObjeto("Gorka", "Pérez", 30);
-  console.log(persona); // Persona { nombre: 'Gorka', apellido: 'Pérez',edad: 30 }
-            </code>
-            </pre>
+              class PersonaConstructor {
+              constructor(nombre, edad) {
+              this.nombre = nombre; // Inicializa la propiedad nombre
+              this.edad = edad;     // Inicializa la propiedad edad
+                }
+              }
+                
+              const personaUser = new Persona1Constructor("Pedro", 30);
+              console.log(personaUser.nombre); // Pedro
+              console.log(personaUser.edad);   // 30
+              </code>
+              </pre>
+        </div>
+         <!-- FIN Fila 2 -->
+  
       </div>
-       <!-- FIN Fila 2 -->
+   <!--  FIN TABLA 2 -->
 
-    </div>
- <!--  FIN TABLA 2 -->
 
   <!-- TABLA 3 -->
 
@@ -73,19 +74,19 @@ class PersonaObjeto {
     <div class="celda-ejem">
           <pre class="prettyprint">
           <code>
-            class PersonaThis {
-              constructor(nombre, edad) {
-                this.nombre = nombre; // "this" se refiere a la instancia actual
-                this.edad = edad;
-              }
+          class PersonaThis {
+          constructor(nombre, edad) {
+          this.nombre = nombre; // "this" se refiere a la instancia actual
+          this.edad = edad;
+          }
             
-              presentarse() {
-                console.log(`Me llamo ${this.nombre}`); //Accede a la propiedad "nombre" de la instancia
-              }
-            }
+          presentarse() {
+          console.log(`Me llamo ${this.nombre}`); //Accede a la propiedad "nombre" de la instancia
+          }
+          }
             
-            const persona1 = new PersonaThis("Pedro", 30);
-            persona1.presentarse(); // Me llamo Pedro
+          const persona1 = new PersonaThis("Pedro", 30);
+          persona1.presentarse(); // Me llamo Pedro
           </code>
           </pre>
     </div>
@@ -94,100 +95,42 @@ class PersonaObjeto {
   </div>
 <!--  FIN TABLA 3 -->
 
-<!-- TABLA 4 -->
-
-<div class="tabla-grid">
-  <!-- encabezado-ejem paras -->
-    <div class="encabezado-ejem para"> Datos primitivos en clases</div>
-    
-  <!-- Fila 4 -->
-  <div class="celda-ejem">
-        <pre class="prettyprint">
-        <code>
-          class PersonaClases {
-            constructor(nombre) {
-              this.nombre = nombre;//Asignación de un valor primitivo
-            }
-          }
-          
-          let p1 = new PersonaClases("Carlos");
-          let p2 = new PersonaClases("María");
-          
-          p1.nombre = "Pedro";  // Cambia solo el nombre de p1
-          
-          console.log(p1.nombre);  // "Pedro"
-          console.log(p2.nombre);  // "María"
-          
-        </code>
-        </pre>
-  </div>
-   <!-- FIN Fila 4 -->
-
-</div>
-<!--  FIN TABLA 4 -->
 
 
-    <!-- TABLA 5-->
 
-    <div class="tabla-grid">
-      <!-- encabezado-ejem paras -->
-        <div class="encabezado-ejem para"> Uso de Constructores</div>
-        
-      <!-- Fila 5 -->
-      <div class="celda-ejem">
-            <pre class="prettyprint">
-            <code>
-              class PersonaConstructor {
-                constructor(nombre, edad) {
-                  this.nombre = nombre; // Inicializa la propiedad nombre
-                  this.edad = edad;     // Inicializa la propiedad edad
-                }
-              }
-              
-              const persona1 = new PersonaConstructor("Pedro", 30);
-              console.log(persona1.nombre); // Pedro
-              console.log(persona1.edad);   // 30
-            </code>
-            </pre>
-      </div>
-       <!-- FIN Fila 5 -->
-
-    </div>
- <!--  FIN TABLA 5 -->
-
-     <!-- TABLA 6 -->
+     <!-- TABLA 4 -->
 
      <div class="tabla-grid">
       <!-- encabezado-ejem paras -->
         <div class="encabezado-ejem para"> Constructor con herencia</div>
         
-      <!-- Fila 6 -->
+      <!-- Fila 4 -->
       <div class="celda-ejem">
             <pre class="prettyprint">
             <code>
-          // Clase base
-          class Animal {
-          constructor(nombre) {
-            this.nombre = nombre; // Inicializa el nombre en la clase base
-          }
+        // Clase base
+        class Animal {
+        constructor(nombre) {
+        this.nombre = nombre; // Inicializa el nombre en la clase base
+        }
 
-          // Método en la clase base
-          hacerSonido() {
-            console.log("El animal hace un sonido");
-          }
+        // Método en la clase base
+        hacerSonido() {
+        console.log("El animal hace un sonido");
+        }
         }
 
         // Clase hija que extiende de Animal
         class Perro extends Animal {
-          constructor(nombre, raza) {
-            super(nombre); // Llama al constructor de la clase base
-            this.raza = raza; // Agrega una propiedad específica de Perro
-          }
+        constructor(nombre, raza) {
+        super(nombre); // Llama al constructor de la clase base
+        this.raza = raza; // Agrega una propiedad específica de Perro
+        }
 
-          // Método adicional en la clase hija
-          ladrar() {
-            console.log(`${this.nombre} está ladrando.`);
-          }
+        // Método adicional en la clase hija
+        ladrar() {
+        console.log(`${this.nombre} está ladrando.`);
+        }
         }
 
         // Crear una instancia de Perro

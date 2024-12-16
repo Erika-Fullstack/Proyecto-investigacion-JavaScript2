@@ -7,58 +7,32 @@ class Persona {
 const ejemplo = new Persona();
 
 
-  //que es un objeto
+//Uso de constructores
 
-  class PersonaObjeto {
-    constructor(nombre, apellido, edad) {
-      this.nombre = nombre;
-      this.apellido = apellido;
-      this.edad = edad;
-    }
+class PersonaConstructor {
+  constructor(nombre, edad) {
+    this.nombre = nombre; // Inicializa la propiedad nombre
+    this.edad = edad;     // Inicializa la propiedad edad
   }
-              
-  const persona = new PersonaObjeto("Gorka", "Pérez", 30);
+}
 
-  
-  //uso de this
+const personaUser = new PersonaConstructor("Pedro", 30);
 
-  class PersonaThis {
-    constructor(nombre, edad) {
-      this.nombre = nombre; // "this" se refiere a la instancia actual
-      this.edad = edad;
-    }
-  
-    presentarse() {}
+//uso de this
+
+class PersonaThis {
+  constructor(nombre, edad) {
+    this.nombre = nombre; // "this" se refiere a la instancia actual
+    this.edad = edad;
   }
-  
-  const persona1 = new PersonaThis("Pedro", 30);
-  persona1.presentarse(); // Me llamo Pedro
 
-
-  //datos primitivos en clases
-
-  class PersonaClases {
-    constructor(nombre) {
-      this.nombre = nombre;//Asignación de un valor primitivo
-    }
+  presentarse() {
+    console.log(`Me llamo ${this.nombre}`); //Accede a la propiedad "nombre" de la instancia
   }
-  
-  let p1 = new PersonaClases("Carlos");
-  let p2 = new PersonaClases("María");
-  
-  p1.nombre = "Pedro";  // Cambia solo el nombre de p1
-  
+}
 
-  //Uso de constructores
-
-  class PersonaConstructor {
-    constructor(nombre, edad) {
-      this.nombre = nombre; // Inicializa la propiedad nombre
-      this.edad = edad;     // Inicializa la propiedad edad
-    }
-  }
-  
-  const persona1Constructor = new PersonaConstructor("Pedro", 30);
+const persona1 = new PersonaThis("Pedro", 30);
+persona1.presentarse(); // Me llamo Pedro
 
 
 //constructores con herencia
@@ -70,8 +44,8 @@ class Animal {
   }
 
   // Método en la clase base
-  hacerSonido() {}
-  
+  hacerSonido() { console.log("El animal hace un sonido"); }
+
 }
 
 // Clase hija que extiende de Animal
@@ -82,8 +56,8 @@ class Perro extends Animal {
   }
 
   // Método adicional en la clase hija
-  ladrar() 
-  
+  ladrar() { console.log(`${this.nombre} está ladrando.`); }
+
 }
 
 // Crear una instancia de Perro
