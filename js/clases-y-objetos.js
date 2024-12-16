@@ -28,7 +28,7 @@ const ejemplo = new Persona();
       this.edad = edad;
     }
   
-    presentarse() 
+    presentarse() {}
   }
   
   const persona1 = new PersonaThis("Pedro", 30);
@@ -58,7 +58,7 @@ const ejemplo = new Persona();
     }
   }
   
-  const persona1 = new PersonaConstructor("Pedro", 30);
+  const persona1Constructor = new PersonaConstructor("Pedro", 30);
 
 
 //constructores con herencia
@@ -70,7 +70,7 @@ class Animal {
   }
 
   // Método en la clase base
-  hacerSonido() 
+  hacerSonido() {}
   
 }
 
