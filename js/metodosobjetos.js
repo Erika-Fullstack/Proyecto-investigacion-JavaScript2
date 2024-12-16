@@ -69,9 +69,6 @@ let objeto = {
   },
 };
 
-
-
-
 const proto = { 
   greet: function() { 
     return "Hello"; 
@@ -82,10 +79,34 @@ const obj = Object.create(proto);
 //console.log(obj.greet()); 
 // "Hello"
 
-
-
 const target = { a: 1 };
 const source = { b: 2, c: 3 };
 const result = Object.assign(target, source);
+
+
+
+Object.seal(persona);
+delete persona.nombre; // No surte efecto
+console.log(persona.nombre); // "Juan"
+
+
+
+Object.isSealed(persona);
+// true
+
+
+let num = new Number(42);
+console.log(num.valueOf()); // 42
+
+
+persona.hasOwnProperty("nombre");
+//true
+
+
+persona.nombre.valueOf()
+//"Juan"
+
+
+
 
 
