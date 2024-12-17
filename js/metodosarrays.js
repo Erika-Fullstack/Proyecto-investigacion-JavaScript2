@@ -3,10 +3,6 @@ let letras = ["b", "a", "c"];
 let frutas = ["manzana", "banana", "naranja"];
 let frutas2 = ["banana", "uva"];
 
-let letras = ["b", "a", "c"]; 
-letras.sort();
-// ["a", "b", "c"]
-
 
 /* .length 
 console.log(numeros.length); 
@@ -25,7 +21,8 @@ numeros.shift();
 // [2, 3]
 
 /* .sort() 
-console.log(letras.sort());
+let letras = ["b", "a", "c"]; 
+letras.sort();
 // ["a", "b", "c"]
 
 /* .reverse() 

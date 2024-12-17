@@ -20,15 +20,27 @@ body {
   }
   
   .form-tarea input, .form-tarea textarea {
-    width: calc(100% - 20px);
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
   }
+
+.descripcion {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  }
+
+#descripcion{
+width: 90%;
+}
   
   textarea {
     resize: vertical;
+    width: calc(100% - 1rem);
+    margin: 0 auto;
+    justify-content: center;
     
   }
   
@@ -62,6 +74,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
+    border-left: 5px solid rgb(186, 255, 96);
   }
   
   .tarea .info {
@@ -83,6 +96,16 @@ body {
   }
   
   .tarea.importante {
-    border-left: 5px solid red;
+    border-left: 5px solid rgb(245, 94, 84);
+  }
+
+  .tareaCompleta {
+    text-decoration:line-through;
+  }
+
+  #estadisticasTareas{
+    display: flex;
+  justify-content: space-around;
+  font-size: 1.4rem;
   }
   

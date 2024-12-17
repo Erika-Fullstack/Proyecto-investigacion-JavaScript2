@@ -48,7 +48,7 @@ function actualizarTareas() {
     // Método forEach() recorre el array y ejecuta una función para cada elemento. 
     // Con los datos del array vamos a construir el html sustituyendo las variables por los datos del array en cada índice.
     const tareaHTML = `
-      <div class="tarea ${tarea.importante ? "importante" : ""}">
+      <div class="tarea ${tarea.importante ? "importante" : ""} ${tarea.completada ? "tareaCompleta " : ""}">
         <div class="info">
           <h3>${tarea.descripcion}</h3>
           <p>Fecha límite: ${tarea.fecha}</p>
@@ -100,3 +100,17 @@ function actualizarEstadisticas() {
   // Ahora le decimos que el HTML de estadisticas Tareas será construida así
   document.getElementById("estadisticasTareas").innerHTML = estadisticasHTML;
 }
+
+// Fechas
+const date = new Date();
+const [month, day, year] = [
+  date.getMonth(),
+  date.getDate(),
+  date.getFullYear(),
+];
+const [hour, minutes, seconds] = [
+  date.getHours(),
+  date.getMinutes(),
+  date.getSeconds(),
+];
+

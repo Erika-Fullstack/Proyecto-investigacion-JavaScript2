@@ -10,14 +10,16 @@
   <div class="container">
     <h1>Organizador de Tareas</h1>
     <div class="form-tarea">
-      <input type="text" id="descripcion" placeholder="Descripción de la tarea" />
-      <input type="date" id="fechaLimite" />
-     
-        <input type="checkbox" id="esImportante" /> 
-        <label> Importante   </label>
-   
+      <div class="descripcion">
+        <input type="text" id="descripcion" placeholder="Descripción de la tarea" />
+        <input type="date" id="fechaLimite" />
+      </div>
+      
       <textarea id="notas" rows="3" placeholder="Añade notas opcionales"></textarea>
+      
       <button onclick="agregarTarea()">Agregar Tarea</button>
+      <input type="checkbox" id="esImportante" /> 
+      <label> Importante   </label>
     </div>
 
     <h2>Lista de Tareas</h2>
